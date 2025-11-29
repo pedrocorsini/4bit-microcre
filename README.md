@@ -102,7 +102,9 @@ The ALU unit controls the operations based on the instruction mnemonics as the F
 - The top-level module (`top_module.v`) integrates all the individual modules to form the complete 4-bit microcontroller core. It connects the program counter, instruction register, register file, ALU, and other components to ensure proper data flow and control signal management.
 - It also handles the display output through the BCD to 7-segment display converter, allowing users to visualize the microcontroller's operations, and control `clock` and `reset` signals.
 - The following image illustrates the proposed integration of the modules:
-<img src="assets/modules_integration.png" alt="Modules Integration Diagram" width = 550/>
+<p align="center">
+  <img src="assets/modules_integration.png" alt="Modules Integration Diagram" width="900" />
+</p>
 - For presentation purposes, the project is tested based on a predefined instruction set loaded into the ROM module. The `./assets/rom.txt` file contains the instructions used for testing the microcontroller's functionality.
 
 ---
