@@ -1,0 +1,65 @@
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+
+# Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# File: C:\digital2\pinagem.csv
+# Generated on: Fri Nov 28 19:17:56 2025
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+clk,Input,PIN_B8,7,B7_N0,PIN_B8,3.3 V Schmitt Trigger,,,,,
+data1[6],Output,PIN_F18,6,B6_N0,PIN_AA7,3.3-V LVTTL,,,,,
+data1[5],Output,PIN_E20,6,B6_N0,PIN_B11,3.3-V LVTTL,,,,,
+data1[4],Output,PIN_E19,6,B6_N0,PIN_H12,3.3-V LVTTL,,,,,
+data1[3],Output,PIN_J18,6,B6_N0,PIN_C10,3.3-V LVTTL,,,,,
+data1[2],Output,PIN_H19,6,B6_N0,PIN_W6,3.3-V LVTTL,,,,,
+data1[1],Output,PIN_F19,6,B6_N0,PIN_L18,3.3-V LVTTL,,,,,
+data1[0],Output,PIN_F20,6,B6_N0,PIN_C11,3.3-V LVTTL,,,,,
+data2[6],Output,PIN_J20,6,B6_N0,PIN_C20,3.3-V LVTTL,,,,,
+data2[5],Output,PIN_K20,6,B6_N0,PIN_V9,3.3-V LVTTL,,,,,
+data2[4],Output,PIN_L18,6,B6_N0,PIN_B19,3.3-V LVTTL,,,,,
+data2[3],Output,PIN_N18,6,B6_N0,PIN_W8,3.3-V LVTTL,,,,,
+data2[2],Output,PIN_M20,6,B6_N0,PIN_AB20,3.3-V LVTTL,,,,,
+data2[1],Output,PIN_N19,6,B6_N0,PIN_A2,3.3-V LVTTL,,,,,
+data2[0],Output,PIN_N20,6,B6_N0,PIN_H18,3.3-V LVTTL,,,,,
+out_A[6],Output,PIN_B20,6,B6_N0,PIN_AB18,3.3-V LVTTL,,,,,
+out_A[5],Output,PIN_A20,7,B7_N0,PIN_Y11,3.3-V LVTTL,,,,,
+out_A[4],Output,PIN_B19,7,B7_N0,PIN_H19,3.3-V LVTTL,,,,,
+out_A[3],Output,PIN_A21,6,B6_N0,PIN_V11,3.3-V LVTTL,,,,,
+out_A[2],Output,PIN_B21,6,B6_N0,PIN_F3,3.3-V LVTTL,,,,,
+out_A[1],Output,PIN_C22,6,B6_N0,PIN_AA21,3.3-V LVTTL,,,,,
+out_A[0],Output,PIN_B22,6,B6_N0,PIN_W11,3.3-V LVTTL,,,,,
+out_B[6],Output,PIN_C18,7,B7_N0,PIN_P3,3.3-V LVTTL,,,,,
+out_B[5],Output,PIN_D18,6,B6_N0,PIN_A14,3.3-V LVTTL,,,,,
+out_B[4],Output,PIN_E18,6,B6_N0,PIN_E6,3.3-V LVTTL,,,,,
+out_B[3],Output,PIN_B16,7,B7_N0,PIN_J14,3.3-V LVTTL,,,,,
+out_B[2],Output,PIN_A17,7,B7_N0,PIN_U2,3.3-V LVTTL,,,,,
+out_B[1],Output,PIN_A18,7,B7_N0,PIN_V15,3.3-V LVTTL,,,,,
+out_B[0],Output,PIN_B17,7,B7_N0,PIN_N20,3.3-V LVTTL,,,,,
+rst,Input,PIN_A7,7,B7_N0,PIN_A7,3.3 V Schmitt Trigger,,,,,
+state_out[6],Output,PIN_F21,6,B6_N0,PIN_A8,3.3-V LVTTL,,,,,
+state_out[5],Output,PIN_E22,6,B6_N0,PIN_A9,3.3-V LVTTL,,,,,
+state_out[4],Output,PIN_E21,6,B6_N0,PIN_C9,3.3-V LVTTL,,,,,
+state_out[3],Output,PIN_C19,7,B7_N0,PIN_J11,3.3-V LVTTL,,,,,
+state_out[2],Output,PIN_C20,6,B6_N0,PIN_B10,3.3-V LVTTL,,,,,
+state_out[1],Output,PIN_D19,6,B6_N0,PIN_V20,3.3-V LVTTL,,,,,
+state_out[0],Output,PIN_E17,6,B6_N0,PIN_B12,3.3-V LVTTL,,,,,
+ula_out[6],Output,PIN_C14,7,B7_N0,PIN_A10,3.3-V LVTTL,,,,,
+ula_out[5],Output,PIN_E15,7,B7_N0,PIN_B16,3.3-V LVTTL,,,,,
+ula_out[4],Output,PIN_C15,7,B7_N0,PIN_AA1,3.3-V LVTTL,,,,,
+ula_out[3],Output,PIN_C16,7,B7_N0,PIN_R12,3.3-V LVTTL,,,,,
+ula_out[2],Output,PIN_E16,7,B7_N0,PIN_Y21,3.3-V LVTTL,,,,,
+ula_out[1],Output,PIN_D17,7,B7_N0,PIN_K15,3.3-V LVTTL,,,,,
+ula_out[0],Output,PIN_C17,7,B7_N0,PIN_AB19,3.3-V LVTTL,,,,,
