@@ -63,7 +63,6 @@ This repository contains the implementation of a simple 4-bit microcontroller co
 
 The Finite State Machine created follows a workflow with the following states:
 <img src="assets/fsm_diagram.png" alt="FSM Diagram"/>
-<font size="2">**Figure 1:** FSM Diagram used on the project.</font>
 
 The ALU unit controls the operations based on the instruction mnemonics as the FSM transitions through the states:
 
@@ -104,8 +103,6 @@ The ALU unit controls the operations based on the instruction mnemonics as the F
 - It also handles the display output through the BCD to 7-segment display converter, allowing users to visualize the microcontroller's operations, and control `clock` and `reset` signals.
 - The following image illustrates the proposed integration of the modules:
 <img src="assets/modules_integration.png" alt="Modules Integration Diagram" width = 550/>
-<font size="2">**Figure 2:** Modules Integration Diagram.</font>   
- 
 - For presentation purposes, the project is tested based on a predefined instruction set loaded into the ROM module. The `./assets/rom.txt` file contains the instructions used for testing the microcontroller's functionality.
 
 ---
