@@ -1,6 +1,6 @@
 module register_file #(
     parameter DATA_WIDTH = 4,
-    parameter ADDR_WIDTH = 2,// 4 registros, 2 bits de endereço
+    parameter ADDR_WIDTH = 2,// 4 registers, 2 bit address
     parameter REG_COUNT  = 4
 )(
     input  wire                     clk,
@@ -13,9 +13,9 @@ module register_file #(
     output wire [DATA_WIDTH-1:0]    rd_data2,
     output reg wr_ack
 );
-    // Banco de registradores
+    // Register bank
     reg [DATA_WIDTH-1:0] registers [0:REG_COUNT-1];
-    // Escrita síncrona
+    // Synchronous write
     always @(posedge clk) begin
         if (wr_en) begin
             registers[wr_addr] <= wr_data;
@@ -25,7 +25,7 @@ module register_file #(
         else
             wr_ack <=1'b0;
     end
-    // Leitura combinacional (assíncrona)
+    // Combinational read (asynchronous)
     assign rd_data1 = registers[rd_addr1];
     assign rd_data2 = registers[rd_addr2];
 endmodule

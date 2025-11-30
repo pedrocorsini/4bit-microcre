@@ -3,7 +3,7 @@ module program_counter (
     input  wire        rst,
     input  wire        en,
     output reg  [7:0]  pc_out,
-    output reg         ack      // novo sinal de handshaking
+    output reg         ack      // new handshaking singal
 );
 
     always @(negedge clk or posedge rst) begin
@@ -12,9 +12,9 @@ module program_counter (
             ack    <= 1'b0;
         end else if (en) begin
             pc_out <= pc_out + 1;
-            ack    <= 1'b1;     // sobe quando o PC atualiza
+            ack    <= 1'b1;     // high for 1 cycle when counting
         end else begin
-            ack    <= 1'b0;     // ack desativado nos outros ciclos
+            ack    <= 1'b0;     // ack low when not counting in other cycles
         end
     end
 

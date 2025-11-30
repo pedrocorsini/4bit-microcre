@@ -9,6 +9,8 @@ module top_module(
 	output wire [6:0] out_B
 );
 
+// Wire connections:
+
 wire pc_ack;
 wire ena_pc;
 wire ena_ri;
@@ -34,6 +36,7 @@ wire ena_ula;
 wire ula_ack;
 wire [2:0] state;
 
+	// Program Counter:
 
 	program_counter pc(
 		.clk(clk),
@@ -42,11 +45,15 @@ wire [2:0] state;
 		.ack(pc_ack),
 		.pc_out(addr_bus)
 	);
+
+	// ROM Memory:
 	
 	rom_8x256 rom(
 		.addr(addr_bus),
 		.data(data_bus)
 	);
+
+	// Instruction Register:
 
 	instruction_register insreg(
 		.clk(clk),
@@ -59,6 +66,8 @@ wire [2:0] state;
 		.ack(ri_ack)
 	);
 	
+	// 2 bit mux 2x1:
+
 	mux2x1_2bit mux1(
 		.in0(2'b00),
 		.in1(wr_addr_mnm),
@@ -66,6 +75,8 @@ wire [2:0] state;
 		.out(wr_addr)
 	);
 	
+	// 4 bit mux 2x1:
+
 	mux2x1_4bit mux2(
 		.in0(wr_data_ula),
 		.in1(wr_data_ldr),
@@ -73,12 +84,16 @@ wire [2:0] state;
 		.out(wr_data)
 	);
 	
+	// 4 bit demux 1x2:
+
 	demux1x2_4bit demux(
 		.in(rd_addr_wr_data),
 		.sel(sel_addr_data),
 		.out0(wr_data_ldr),
 		.out1(rd_addr)
 	);
+
+	// Register File:
 	
 	register_file regfile(
 		.clk(clk),
@@ -92,6 +107,8 @@ wire [2:0] state;
 		.rd_data2(operando_B)
 	);
 	
+	// ALU:
+
 	ula_4bit_sync ula(
 		.a(operando_A),
 		.b(operando_B),
@@ -101,6 +118,8 @@ wire [2:0] state;
 		.result(wr_data_ula),
 		.ula_ack(ula_ack)
 	);
+
+	// Finite State Machine:
 	
 	fsm sm(
 		.clk(clk),
@@ -118,27 +137,37 @@ wire [2:0] state;
 		.ula_ack(ula_ack),
 		.state_out(state)
 	);
+
+	// MSB data 7-segment displays:
 	
 	bcd_disp bcd_data2(
 		.in(data_bus[7:4]),
 		.disp(data2)
 	);
+
+	// LSB data 7-segment display:
 	
 	bcd_disp bcd_data1(
 		.in(data_bus[3:0]),
 		.disp(data1)
 	);
+
+	// FSM state 7-segment display:
 	
 	bcd_disp fsm_state(
 		.in({1'b0, state}),
 		.disp(state_out)
 	);
 	
+	// ALU result 7-segment display:
+
 	bcd_disp bcd_ula(
 		.in(wr_data_ula),
 		.disp(ula_out)
 	);
 	
+	// Operand A and B 7-segment displays:
+
 	bcd_disp opA(
 		.in(operando_A),
 		.disp(out_A)
