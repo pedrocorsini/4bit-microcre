@@ -3,7 +3,7 @@ module top_module(
 	input wire rst,
 	output wire [6:0] data2,
 	output wire [6:0] data1,
-	output wire [6:0] out_state,
+	output wire [6:0] state_out,
 	output wire [6:0] ula_out,
 	output wire [6:0] out_A,
 	output wire [6:0] out_B
@@ -180,7 +180,7 @@ wire [2:0] state;
 	// State output:
 	bcd_disp fsm_state(
 		.in({1'b0, state}),
-		.disp(out_state)
+		.disp(state_out)
 	);
 
 endmodule

@@ -26,7 +26,7 @@ This repository contains the implementation of a simple 4-bit microcontroller co
 │       └── bcd_disp.v                  # BCD to 7-segment display converter
 │       └── demux1x2_4bit.v             # 1-to-2 demultiplexer for 4-bit signals 
 │       └── fsm.v                       # Finite State Machine module
-│       └── instrucion_register.v       # Instruction Register module
+│       └── instruction_register.v       # Instruction Register module
 │       └── mux2x1_2bit.v               # 2-to-1 multiplexer for 2-bit signals
 │       └── mux2x1_4bit.v               # 2-to-1 multiplexer for 4-bit signals
 │       └── program_counter.v           # Program Counter module
