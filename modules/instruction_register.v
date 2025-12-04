@@ -10,7 +10,7 @@ module instruction_register (
 );
    
 always@(posedge clk or negedge rst) begin
-    if(!st)
+    if(!rst)
         begin
             mnm <= 2'b00;
             wr_addr_mnm <= 2'b00;
