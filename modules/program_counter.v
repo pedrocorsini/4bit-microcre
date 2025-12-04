@@ -6,8 +6,8 @@ module program_counter (
     output reg         ack      // new handshaking singal
 );
 
-    always @(negedge clk or posedge rst) begin
-        if (rst) begin
+    always @(negedge clk or negedge rst) begin
+        if (!rst) begin
             pc_out <= 8'b0;
             ack    <= 1'b0;
         end else if (en) begin

@@ -9,8 +9,8 @@ module instruction_register (
     output reg ack // end operation handshaking
 );
    
-always@(posedge clk or posedge rst) begin
-    if(rst)
+always@(posedge clk or negedge rst) begin
+    if(!st)
         begin
             mnm <= 2'b00;
             wr_addr_mnm <= 2'b00;
