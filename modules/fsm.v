@@ -74,13 +74,13 @@ always@(*)
 		sel_ldr_ula = 0;
 		ena_ula = 0;	
 		case(state)
-			PC: 	begin ena_pc = 1'b1; ena_ri = 1'b0; ena_wr = 1'b0; sel_r0_rd = 1'b0; sel_addr_data = 1'b0; sel_ldr_ula = 1'b0; ena_ula = 1'b0; end
-			Fetch: 	begin ena_pc = 1'b0; ena_ri = 1'b1; ena_wr = 1'b0; sel_r0_rd = 1'b0; sel_addr_data = 1'b0; sel_ldr_ula = 1'b0; ena_ula = 1'b0; end
-			LDR: 	begin ena_pc = 1'b0; ena_ri = 1'b0; ena_wr = 1'b1; sel_r0_rd = 1'b1; sel_addr_data = 1'b0; sel_ldr_ula = 1'b1; ena_ula = 1'b0; end
-			Arit: 	begin ena_pc = 1'b0; ena_ri = 1'b0; ena_wr = 1'b0; sel_r0_rd = 1'b0; sel_addr_data = 1'b1; sel_ldr_ula = 1'b0; ena_ula = 1'b1; end
-			WB_Rd:	begin ena_pc = 1'b0; ena_ri = 1'b0; ena_wr = 1'b1; sel_r0_rd = 1'b1; sel_addr_data = 1'b0; sel_ldr_ula = 1'b0; ena_ula = 1'b0; end
-			Logica:	begin ena_pc = 1'b0; ena_ri = 1'b0; ena_wr = 1'b0; sel_r0_rd = 1'b0; sel_addr_data = 1'b1; sel_ldr_ula = 1'b0; ena_ula = 1'b1; end
-			WB_R0:	begin ena_pc = 1'b0; ena_ri = 1'b0; ena_wr = 1'b1; sel_r0_rd = 1'b0; sel_addr_data = 1'b0; sel_ldr_ula = 1'b0; ena_ula = 1'b0; end
+			PC: 	begin ena_pc = 1'b1; end
+			Fetch: 	begin ena_ri = 1'b1; end
+			LDR: 	begin ena_wr = 1'b1; sel_r0_rd = 1'b1; sel_ldr_ula = 1'b1; end
+			Arit: 	begin sel_addr_data = 1'b1;  ena_ula = 1'b1; end
+			WB_Rd:	begin ena_wr = 1'b1; sel_r0_rd = 1'b1; end
+			Logica:	begin sel_addr_data = 1'b1; ena_ula = 1'b1; end
+			WB_R0:	begin ena_wr = 1'b1; end
 		endcase
 	end
 endmodule
