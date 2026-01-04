@@ -4,7 +4,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/pedrocorsini/ecot12?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/pedrocorsini/ecot12?style=for-the-badge)
 
-This repository contains the implementation of a simple 4-bit microcontroller core, designed for DE10-Lite FPGA. The microcontroller is build using Verilog HDL and is intended for edcucational purposes, demonstrating basic microcontroller architecture and functionality. It's also the final project for the Digital Electronics 2 course (ELTD12A) at UNIFEI - Universidade Federal de Itajubá.
+This repository contains the implementation of a simple 4-bit microcontroller core, designed for DE10-Lite FPGA. The microcontroller was built using Verilog HDL and is intended for edcucational purposes, demonstrating basic microcontroller architecture and functionality. It's also the final project for the Digital Electronics 2 course (ELTD12A) at UNIFEI - Universidade Federal de Itajubá.
 
 ---
 
